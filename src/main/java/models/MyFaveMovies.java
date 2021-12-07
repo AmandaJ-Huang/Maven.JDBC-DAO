@@ -1,10 +1,6 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class MyFaveMovies<T> implements Movies<T> {
-    private List<T> movieList = new ArrayList<>();
+public class MyFaveMovies {
     private Integer id;
     private String title;
     private Integer year;
@@ -27,31 +23,6 @@ public class MyFaveMovies<T> implements Movies<T> {
         this.year = year;
         this.genre = genre;
         this.rating = rating;
-    }
-
-    @Override
-    public T findById(int id) {
-        return movieList.get(id);
-    }
-
-    @Override
-    public List<T> findAll() {
-        return this.movieList;
-    }
-
-    @Override
-    public T update(T dto) {
-        return null;
-    }
-
-    @Override
-    public T create(T dto) {
-        return null;
-    }
-
-    @Override
-    public void delete(int id) {
-        this.movieList.remove(id);
     }
 
     public Integer getId() {
