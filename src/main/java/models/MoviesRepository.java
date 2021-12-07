@@ -3,7 +3,7 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MoviesRepository<T> implements Movies<T>, MovieDTO {
+public class MoviesRepository<T> implements Movies<T> {
     List<T> movieList = new ArrayList<>();
 
     @Override
@@ -29,10 +29,5 @@ public class MoviesRepository<T> implements Movies<T>, MovieDTO {
     @Override
     public void delete(int id) {
 
-    }
-
-    @Override
-    public int getId() {
-        return 0;
     }
 }
