@@ -1,4 +1,4 @@
-package daos;
+package models;
 
 import java.util.List;
 

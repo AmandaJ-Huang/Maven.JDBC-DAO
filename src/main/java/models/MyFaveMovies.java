@@ -1,10 +1,10 @@
-package daos;
+package models;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyFaveMovies<T> implements Movies<T> {
-    private List<T> movieList;
+    private List<T> movieList = new ArrayList<>();
     private Integer id;
     private String title;
     private Integer year;
@@ -12,7 +12,13 @@ public class MyFaveMovies<T> implements Movies<T> {
     private Integer rating;
 
     public MyFaveMovies() {
-        this(0, "Title", 1900, "Genre", 100);
+    }
+
+    public MyFaveMovies(String title, Integer year, String genre, Integer rating) {
+        this.title = title;
+        this.year = year;
+        this.genre = genre;
+        this.rating = rating;
     }
 
     public MyFaveMovies(int id, String title, Integer year, String genre, Integer rating) {
@@ -21,7 +27,6 @@ public class MyFaveMovies<T> implements Movies<T> {
         this.year = year;
         this.genre = genre;
         this.rating = rating;
-        this.movieList = new ArrayList<>();
     }
 
     @Override
