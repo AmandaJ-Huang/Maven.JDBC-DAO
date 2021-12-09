@@ -1,4 +1,4 @@
-package models;
+package daos;
 
 public interface MovieDTO {
     int getId();

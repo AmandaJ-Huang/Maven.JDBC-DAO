@@ -2,7 +2,7 @@ package models;
 
 import org.junit.Test;
 
-public class MyFaveMoviesTest {
+public class MoviesTest {
 
     @Test
     public void testGetID() {

@@ -1,8 +1,8 @@
-package models;
+package daos;
 
 import org.junit.Test;
 
-public class MoviesRepositoryTest {
+public class MoviesDAORepositoryTest {
 
     @Test
     public void testFindById() {

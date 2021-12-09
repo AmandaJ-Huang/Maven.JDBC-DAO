@@ -1,9 +1,9 @@
-package models;
+package daos;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MoviesRepository<T> implements Movies<T> {
+public class MoviesRepository<T> implements MoviesDAO<T> {
     List<T> movieList = new ArrayList<>();
 
     @Override
