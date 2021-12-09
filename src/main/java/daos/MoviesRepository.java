@@ -67,7 +67,7 @@ public class MoviesRepository implements MoviesDAO<Movies> {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return null;
+        return movies;
     }
 
     @Override
