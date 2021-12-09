@@ -21,22 +21,24 @@ public class AppRunner {
                 .setYear(2019)
                 .createMovies();
 
+        Movies ratatouille = moviesRepository.findById(4);
+        ratatouille.setGenre("Family");
+
         // running CRUD operation against MoviesRepositoryDAO
-        Movies gb = moviesRepository.create(grandBudapest);
-        Movies kO = moviesRepository.create(knivesOut);
+//        Movies gb = moviesRepository.create(grandBudapest);
+//        Movies kO = moviesRepository.create(knivesOut);
 
-        // should return all movies
-        System.out.println(moviesRepository.findAll());
+        // should return Spider-Man - yes
+//        System.out.println(moviesRepository.findById(3));
 
-        // should return Spider-Man
-        System.out.println(moviesRepository.findById(3));
-
-        // should remove knivesOut
+        // should remove knivesOut - yes
 //        moviesRepository.delete(7);
 
-        // should update Ratatouille
+        // should update - YEP
 
+        moviesRepository.update(ratatouille);
+
+        // should return all movies - yes
+        System.out.println(moviesRepository.findAll());
     }
-
-
 }

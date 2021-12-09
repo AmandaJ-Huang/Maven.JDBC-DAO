@@ -58,16 +58,21 @@ public class MoviesRepository implements MoviesDAO<Movies> {
     public Movies update(Movies movies) {
         try {
             PreparedStatement ps = connection.prepareStatement(
-                    "UPDATE movies SET title=?, year=?, genre=?, rtrating=? WHERE id=?");
+                    "UPDATE movies SET title=?, year=?, genre=?, rtrating=? WHERE id=" + movies.getId());
             ps.setString(1, movies.getTitle());
             ps.setInt(2, movies.getYear());
             ps.setString(3, movies.getGenre());
             ps.setInt(4, movies.getRating());
+            int i = ps.executeUpdate();
+
+            if (i == 1) {
+                return movies;
+            }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return movies;
+        return null;
     }
 
     @Override
