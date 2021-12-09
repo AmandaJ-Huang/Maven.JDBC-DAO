@@ -6,7 +6,7 @@ public interface MoviesDAO<T> {
 
     T findById(int id);
     List<T> findAll();
-    T update(T dto);
-    T create(T dto);
+    T update(T movies);
+    T create(T movies);
     void delete(int id);
 }

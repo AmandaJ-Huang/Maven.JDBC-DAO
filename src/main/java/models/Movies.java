@@ -1,6 +1,8 @@
 package models;
 
-public class Movies {
+import daos.MovieDTO;
+
+public class Movies implements MovieDTO {
     private Integer id;
     private String title;
     private Integer year;
@@ -25,7 +27,7 @@ public class Movies {
         this.rating = rating;
     }
 
-    public Integer getId() {
+    public int getId() {
         return this.id;
     }
 
@@ -63,5 +65,16 @@ public class Movies {
 
     public void setRating(Integer rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "Movies{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", year=" + year +
+                ", genre='" + genre + '\'' +
+                ", rating=" + rating +
+                '}';
     }
 }
