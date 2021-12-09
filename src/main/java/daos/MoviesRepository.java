@@ -4,9 +4,7 @@ import models.Movies;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class MoviesRepository implements MoviesDAO<Movies> {
     Connection connection = ConnectionFactory.getConnection();
@@ -40,11 +38,10 @@ public class MoviesRepository implements MoviesDAO<Movies> {
 
     @Override
     public List<Movies> findAll() {
+        List<Movies> movieSet = new ArrayList<>();
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM movies");
-
-            List<Movies> movieSet = new ArrayList<>();
 
             while (rs.next()) {
                 Movies movies = extractMoviesFromResultSet(rs);

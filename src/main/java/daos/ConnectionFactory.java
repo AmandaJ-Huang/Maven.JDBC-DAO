@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-    public static final String URL = "jdbc:mysql://localhost:3306/movies";
+    public static final String URL = "jdbc:mysql://localhost:3306/MyFaveMovies";
     public static final String USER = "rick";
     public static final String PASS = "rick123";
 
@@ -28,8 +28,8 @@ public class ConnectionFactory {
      * Test Connection
      */
 
-    public static void main(String[] args) {
-        Connection connection = ConnectionFactory.getConnection();
-    }
+//    public static void main(String[] args) {
+//        Connection connection = ConnectionFactory.getConnection();
+//    }
 
 }
